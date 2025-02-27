@@ -18,6 +18,8 @@ public class TaskController {
         this.taskService = taskService;
     }
 
+    //TODO Co powinny zwracać takie metody oprócz wartości to jakie kody?
+
     @PostMapping
     public Long addTask(@RequestBody Task task) {
         return this.taskService.addTask(task);
@@ -29,10 +31,10 @@ public class TaskController {
         return task.orElse(null);
     }
 
-    @PutMapping
+/*    @PutMapping
     public Task updateTask(@RequestBody Task task) {
-        return null;
-    }
+        return this.taskService.updateTask(task);
+    }*/
 
 /*    @DeleteMapping("/{id}")
     public String deleteTask(@PathVariable Long id) {

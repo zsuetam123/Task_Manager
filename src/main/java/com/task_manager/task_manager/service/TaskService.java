@@ -8,6 +8,8 @@ import java.util.Optional;
 @Service
 public class TaskService {
 
+    //TODO Co powinny zwracać takie metody?
+
     public Optional<Task> getTask(Long taskId){
         return Optional.of(new Task());
     }
@@ -18,5 +20,9 @@ public class TaskService {
 
     public void deleteTask(Long id){
         return;
+    }
+
+    public Long updateTask(Task task){
+        return null;
     }
 }
