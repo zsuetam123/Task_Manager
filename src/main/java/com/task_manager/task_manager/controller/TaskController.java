@@ -24,12 +24,12 @@ public class TaskController {
     }
 
     @GetMapping("/{id}")
-    public Task findTask(@PathVariable Long id) {
-        Optional<Task> task = this.taskService.getTask(id);
+    public Task findTask(@PathVariable("id") Long taskId) {
+        Optional<Task> task = this.taskService.getTask(taskId);
         return task.orElse(null);
     }
 
-    @PutMapping("/")
+    @PutMapping
     public Task updateTask(@RequestBody Task task) {
         return null;
     }
