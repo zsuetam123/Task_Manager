@@ -19,6 +19,7 @@ public class TaskController {
     }
 
     //TODO Co powinny zwracać takie metody oprócz wartości to jakie kody?
+    //TODO Kiedy użyć @PathVariable a kiedy @PathParam
 
     @PostMapping
     public Long addTask(@RequestBody Task task) {
